@@ -81,7 +81,7 @@ public class Main extends Configured implements Tool {
         for (FileStatus fileStatus : status) {
             if (!fileStatus.getPath().toString().endsWith("_SUCCESS")) {
                 Path outFilePath = fileStatus.getPath();
-//                System.out.println("read " + outFilePath);
+                System.out.println("read " + outFilePath);
                 BufferedReader br = new BufferedReader(new InputStreamReader(hdfs.open(outFilePath)));
                 String line;
                 while ((line = br.readLine()) != null) {
